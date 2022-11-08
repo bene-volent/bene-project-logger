@@ -4,7 +4,7 @@
   "description": "Logs all the projects creating in vercel by me",
   "main": "index.js",
   "scripts": {
-    "dev": "node index.js"
+    "server": "node index.js"
   },
   "author": "Bene@github.com/bene-volent",
   "license": "ISC",

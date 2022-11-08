@@ -1,5 +1,6 @@
 const dotenv = require("dotenv");
 const axios = require("axios");
+const path = require('path');
 dotenv.config();
 
 const vercelToken = process.env.VERCEL_TOKEN;
@@ -14,6 +15,9 @@ const port = 3000;
 const SELF = {
     name:"bene-project-logger"
 }
+app.get("/",(req,res)=>{
+    res.sendFile(path.join(__dirname,'index.html'))
+})
 
 app.get("/api/vercel/projects", (req, res) => {
     let config = {
@@ -48,4 +52,5 @@ app.get("/api/vercel/projects", (req, res) => {
             console.log(err);
         });
 });
-app.listen(port, () => console.log(`Example app listening on port ${port} !`));
+
+module.exports= app
