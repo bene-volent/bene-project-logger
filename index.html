@@ -8,24 +8,49 @@
 </head>
 <body>
     <h1>This api is created to get a list of all the projects created.</h1>
-    <fieldset>
-        <legend>Vercel</legend>
-        <a href="/api/vercel/projects">
-            <h3>Project Links</h3>
-        </a>
-        <p>Response body contains a list of all the projects hosted on vercel</p>
-        <p><strong>Response Content</strong></p>
-        <code >
-            <pre>
-            
-    {
-        name:"PROJECT NAME",
-        githubRepo:"REPO LINK",
-        link:"Latest Deployment Link"
-    }
-        </pre>
-        </code>
+    <section id="vercel-projects">
 
-    </fieldset>
+        <fieldset>
+            <legend>Vercel</legend>
+            <a href="/api/vercel/projects">
+                <h3>Project Links</h3>
+            </a>
+            <p>Response body contains a list of all the projects hosted on vercel</p>
+            <p><strong>Response Content</strong></p>
+            <code >
+                <pre>
+                
+        {
+            name:"PROJECT NAME",
+            githubRepo:"REPO LINK",
+            link:"Latest Deployment Link"
+        }
+            </pre>
+            </code>
+    
+        </fieldset>
+    </section>
+    <section id="github-projects">
+
+        <fieldset>
+            <legend>Github</legend>
+            <a href="/api/github/projects">
+                <h3>Project Links</h3>
+            </a>
+            <p>Response body contains a list of all the projects hosted on vercel</p>
+            <p><strong>Response Content</strong></p>
+            <code >
+                <pre>
+                
+        {
+            name:"PROJECT NAME",
+            githubRepo:"REPO LINK",
+            link:"Latest Deployment Link in github pages"
+        }
+            </pre>
+            </code>
+    
+        </fieldset>
+    </section>
 </body>
 </html>
