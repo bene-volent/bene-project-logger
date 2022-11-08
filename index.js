@@ -10,6 +10,11 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
+
+const SELF = {
+    name:"bene-project-logger"
+}
+
 app.get("/api/vercel/projects", (req, res) => {
     let config = {
         method: "get",
@@ -24,6 +29,7 @@ app.get("/api/vercel/projects", (req, res) => {
     axios(config)
         .then((response) => {
             for (let project of response.data.projects) {
+                if (project.name!=SELF.name)
                 results.push({
                     name: project.name,
                     githubRepo: `https://github.com/${project.link.org}/${project.link.repo}`,
